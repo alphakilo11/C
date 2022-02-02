@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
+#define PI 3.14159265
+
 int main()
 {
     struct _windinformation {
@@ -10,7 +12,7 @@ int main()
     };
     
     struct _windinformation loxz;
-    loxz.direction = 320;
+    loxz.direction = 45;
     loxz.speed = 12;
     loxz.gust = 25;
 
@@ -21,7 +23,8 @@ int main()
     printf(" Wind Heading: %i°, Speed: %i\n", loxz.direction, loxz.speed);
 
     /* Umwanddlung in Vektoren im Koordinatensystem */
-    printf(" Wind Angle: %i°\n", alpha);
+    double result = sin(loxz.direction / 360 * 2 * PI);
+    printf(" Wind Angle: %i° %f\n", alpha, result);
     printf("Crosswind: %f\n", crosswind);
     return 0;
 }
