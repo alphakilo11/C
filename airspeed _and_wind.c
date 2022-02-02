@@ -1,7 +1,18 @@
+/* calculate wind influence on aircraft movement
+ADD Convert to vectors in XY coordinate system
+ADD Crosswind and Head/Tailwind Component
+ADD Ground Speed
+ADD Ground Track
+ADD Mach Number */
+
 #include <stdio.h>
 #include <math.h>
 
 #define PI 3.14159265
+
+double conv_radians(double degrees) {
+    return (degrees / 180 * PI);
+}
 
 int main()
 {
@@ -12,7 +23,7 @@ int main()
     };
     
     struct _windinformation loxz;
-    loxz.direction = 45;
+    loxz.direction = 180;
     loxz.speed = 12;
     loxz.gust = 25;
 
@@ -23,8 +34,8 @@ int main()
     printf(" Wind Heading: %i°, Speed: %i\n", loxz.direction, loxz.speed);
 
     /* Umwanddlung in Vektoren im Koordinatensystem */
-    double result = sin(loxz.direction / 360 * 2 * PI);
-    printf(" Wind Angle: %i° %f\n", alpha, result);
+
+    printf(" Wind Angle: %i° %.8f radians\n", alpha, conv_radians(loxz.direction));
     printf("Crosswind: %f\n", crosswind);
     return 0;
 }
