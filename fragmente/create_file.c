@@ -4,14 +4,16 @@
 
 int main()
 {
-    int i;
-    long c, x;
+    int i, x;
+    long c;
     for (i = 0; i < 10000; i++) {
         x = random() % 65536;
+        /* scanf("%i", &x); */
+        /* print changes only */
         if (c == x)
             ;
         else {
-            printf("%li:%li;", time(0), x);
+            printf("%lu:%i;", clock(), x);
             c = x;
         }
     }
