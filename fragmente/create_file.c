@@ -4,6 +4,8 @@
 
 int main()
 {
+    FILE *fp = NULL;
+    fp = fopen("test1.txt" ,"a");
     int i, x;
     long c;
     for (i = 0; i < 10000; i++) {
@@ -13,9 +15,10 @@ int main()
         if (c == x)
             ;
         else {
-            printf("%lu:%i;", clock(), x);
+            fprintf(fp, "%lu:%i;", time(0), x);
             c = x;
         }
     }
+    fclose(fp);
     return 0;
 }
