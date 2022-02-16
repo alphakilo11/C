@@ -118,8 +118,5 @@ int main(void)
   PRINT_DATE_ISO8601(test->date);
   printf("%s\n", test->text);
   printf("%s\n", test->verfasser);
-
-
-  free(eins);
   return 0;
 }
