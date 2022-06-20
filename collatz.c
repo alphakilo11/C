@@ -7,7 +7,7 @@ int main() {
     start = clock();
 
     unsigned long i, n;
-    for (i = 1; i < 100000000; i++) {
+    for (i = 1; i < 52500000; i++) {
         n = i;
         //printf("%i ", n);
         while (n != 1) {
