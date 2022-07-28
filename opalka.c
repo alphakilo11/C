@@ -14,6 +14,6 @@ int main()
         for (i = 0; i < OPALKA; i++)
                 leinwand[i] = i + 1;
     }
-    printf("%jd\n", clock());
+    printf("%f\n", (double) clock() / CLOCKS_PER_SEC);
     return 0;
 }

@@ -3,7 +3,7 @@
 
 int main() {
     long long count = 0;
-    while (count < 20000000000 / 12 * 10 ) {
+    while (count < 23000000000) {
         count++;
     }
     printf("%lli, Time: %f s", count, (double) clock() / CLOCKS_PER_SEC);
