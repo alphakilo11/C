@@ -7,7 +7,11 @@ int main() {
     while (count < 23000000000) {
         count++;
     }
-    printf("%lli, CPU-Time: %f s", count, (double) clock() / CLOCKS_PER_SEC);
-    printf("Time: %f", difftime(time(NULL), start_time));
+    time_t now = time(NULL);
+    double passed_time = difftime(now, start_time);
+    double cpu_time = (double) clock() / CLOCKS_PER_SEC;
+    printf("%lli, %f, ", count, cpu_time);
+    printf("%f, ", passed_time);
+    printf("%li\n", now);
     return 0;
 }
