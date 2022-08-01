@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <time.h>
 
-#define REPETITIONS 23000000000
+#define REPETITIONS 2300000000000
 
 int main() {
     time_t start_time = time(NULL);
-    for (long i = 0; i < REPETITIONS; i++) {
-        ;
+    long count = 0;
+    while (count < REPETITIONS) {
+        count++;
     }
     time_t now = time(NULL);
     double passed_time = difftime(now, start_time);
