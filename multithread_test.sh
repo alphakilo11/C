@@ -1,8 +1,8 @@
 #! /bin/bash
 x=0
-while [ $x -lt 8 ]
+while [ $x -lt 6 ]
 do
-    ./a.out &
+    time ./a.out &
     x=$(( $x + 1 ))
 done
 wait
