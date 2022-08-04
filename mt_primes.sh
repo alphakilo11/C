@@ -1,6 +1,6 @@
 #! /bin/bash
 # this calls the prime-generator (mt_primes.c). it will only calculate the first x primes when run in one instance.
-# with multiple instances there are small deviations as not every 
+# with multiple instances there are small deviations as not every series of numbers has the same amount of primes.
 instances=1
 
 start_value=3
